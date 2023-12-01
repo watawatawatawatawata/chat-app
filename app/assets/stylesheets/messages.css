@@ -11,12 +11,48 @@
 .side-header {
   height: 100px;
   padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-name {
+  margin: auto 0;
+}
+
+.user-link {
+  color: #fafafa;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.create-chat {
+  border: 1px solid lightblue;
+  font-size: 10px;
+  padding: 14px;
+  margin: auto 0;
+}
+
+.create-btn {
+  text-decoration: none;
+  color: deepskyblue;
+  text-decoration: none;
 }
 
 .side-bar {
   background-color: #2f3e51;
   height: calc(100vh - 100px);
   padding: 0 20px;
+  overflow: scroll;
+}
+
+.room {
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+.room-name {
+  color: white;
+  text-decoration: none;
 }
 
 .main_chat {
