@@ -9,25 +9,7 @@
 
 <div class="main-chat">
 
-  <div class="chat">
-    <div class="chat-info">
-      <div class="chat-user-name">Tom</div>
-      <div class="post-date">2020/3/31(Wed) 12:43:30</div>
-    </div>
-    <div class="chat-message">
-      おはよう
-    </div>
-  </div>
 
-    <div class="chat">
-    <div class="chat-info">
-      <div class="chat-user-name">Tom</div>
-      <div class="post-date">2020/3/31(Wed) 12:43:30</div>
-    </div>
-    <div class="chat-message">
-      こんばんは
-    </div>
-  </div>
 
   <div class="chat">
     <div class="chat-info">
@@ -36,71 +18,23 @@
     </div>
     <div class="chat-message">
       おはよう
-    </div>
-  </div>
-
-    <div class="chat">
-    <div class="chat-info">
-      <div class="chat-user-name">Tom</div>
-      <div class="post-date">2020/3/31(Wed) 12:43:30</div>
-    </div>
-    <div class="chat-message">
-      こんばんは
     </div>
   </div>
   
-  <div class="chat">
-    <div class="chat-info">
-      <div class="chat-user-name">Tom</div>
-      <div class="post-date">2020/3/31(Wed) 12:43:30</div>
-    </div>
-    <div class="chat-message">
-      おはよう
-    </div>
-  </div>
 
-    <div class="chat">
-    <div class="chat-info">
-      <div class="chat-user-name">Tom</div>
-      <div class="post-date">2020/3/31(Wed) 12:43:30</div>
-    </div>
-    <div class="chat-message">
-      こんばんは
-    </div>
-  </div>
-  
-  <div class="chat">
-    <div class="chat-info">
-      <div class="chat-user-name">Tom</div>
-      <div class="post-date">2020/3/31(Wed) 12:43:30</div>
-    </div>
-    <div class="chat-message">
-      おはよう
-    </div>
-  </div>
-
-    <div class="chat">
-    <div class="chat-info">
-      <div class="chat-user-name">Tom</div>
-      <div class="post-date">2020/3/31(Wed) 12:43:30</div>
-    </div>
-    <div class="chat-message">
-      こんばんは
-    </div>
-  </div>
   
 </div>
 
 
 
-<div class="main-footer">
+<%= form_with model: [@room, @message], class: 'main-footer', local: true do |f| %>
   <div class="form-input">
-    <input class="form-message" placeholder= "type a message">
+    <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
     <label class="form-image">
       <span class="image-file">画像</span>
-      <input type="file" class="hidden">
+      <%= f.file_field :image, class: 'hidden' %>
     </label>
   </div>
-  <input class="form-submit" type="submit" value="送信">
-</div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>
 
