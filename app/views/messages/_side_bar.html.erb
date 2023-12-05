@@ -11,7 +11,7 @@
 
   <% current_user.rooms.each do |chatroom| %>
     <div class="room">
-      <%= link_to chatroom.name, edit_user_path(current_user), class:"room-name" %>
+      <%= link_to chatroom.name, room_messages_path(chatroom), class:"room-name" %>
     </div>
   <% end %>
 
